@@ -1,27 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARMeasure" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="530-no-52C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtk-DG-6g5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Ready Yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-E5-c2z">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="0.25088291952054792" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pS0-s5-VAe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgz-AY-P6p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="0.74670911815068497" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="167" id="6bH-B5-MgA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cgz-AY-P6p" firstAttribute="trailing" secondItem="H3R-rj-8dT" secondAttribute="trailing" id="0QT-zy-e1i"/>
+                            <constraint firstItem="qtk-DG-6g5" firstAttribute="top" secondItem="cgz-AY-P6p" secondAttribute="top" id="2G4-7U-8Vq"/>
+                            <constraint firstItem="cgz-AY-P6p" firstAttribute="leading" secondItem="H3R-rj-8dT" secondAttribute="leading" id="2Qz-dB-auo"/>
+                            <constraint firstItem="tLs-E5-c2z" firstAttribute="bottom" secondItem="H3R-rj-8dT" secondAttribute="bottom" id="2oq-yX-z8x"/>
+                            <constraint firstItem="pS0-s5-VAe" firstAttribute="top" secondItem="cgz-AY-P6p" secondAttribute="bottom" constant="-167" id="FbG-iC-Qis"/>
+                            <constraint firstItem="qtk-DG-6g5" firstAttribute="bottom" secondItem="H3R-rj-8dT" secondAttribute="bottom" id="G8S-Zf-ciV"/>
+                            <constraint firstItem="H3R-rj-8dT" firstAttribute="bottom" secondItem="pS0-s5-VAe" secondAttribute="bottom" id="Iyw-In-2ci"/>
+                            <constraint firstItem="pS0-s5-VAe" firstAttribute="leading" secondItem="H3R-rj-8dT" secondAttribute="leading" id="Ovc-sb-diq"/>
+                            <constraint firstItem="tLs-E5-c2z" firstAttribute="top" secondItem="530-no-52C" secondAttribute="top" id="eoV-3V-RUi"/>
+                            <constraint firstItem="cgz-AY-P6p" firstAttribute="top" secondItem="530-no-52C" secondAttribute="top" id="frc-nc-6tS"/>
+                            <constraint firstItem="H3R-rj-8dT" firstAttribute="trailing" secondItem="pS0-s5-VAe" secondAttribute="trailing" id="itq-XH-ot9"/>
+                            <constraint firstItem="qtk-DG-6g5" firstAttribute="trailing" secondItem="tLs-E5-c2z" secondAttribute="trailing" id="sL4-53-1CC"/>
+                            <constraint firstItem="qtk-DG-6g5" firstAttribute="leading" secondItem="cgz-AY-P6p" secondAttribute="leading" id="tNn-hT-Frn"/>
+                            <constraint firstItem="tLs-E5-c2z" firstAttribute="trailing" secondItem="H3R-rj-8dT" secondAttribute="trailing" id="x96-ML-6Ks"/>
+                            <constraint firstItem="tLs-E5-c2z" firstAttribute="leading" secondItem="H3R-rj-8dT" secondAttribute="leading" id="zsT-UM-QpW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H3R-rj-8dT"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="aimLabel" destination="pS0-s5-VAe" id="jxu-SW-79U"/>
+                        <outlet property="notReadyLabel" destination="tLs-E5-c2z" id="ton-Sb-Hra"/>
+                        <outlet property="resultLabel" destination="cgz-AY-P6p" id="vFo-Yg-OD6"/>
+                        <outlet property="sceneView" destination="qtk-DG-6g5" id="sHo-f7-jQh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>
